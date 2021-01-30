@@ -11,7 +11,7 @@ spring:
     gateway:
       routes:
       - id: chat-service
-        uri: localhost:8007
+        uri: http://localhost:8007
         predicates:
         - Path=/chat-service/
 management:
