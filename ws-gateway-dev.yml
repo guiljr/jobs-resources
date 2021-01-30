@@ -12,9 +12,10 @@ spring:
       globalcors:
         corsConfigurations:
           '[/**]':
-            allowedOrigins: ''
+            allowedOrigins: '*'
             allowedMethods:
-            - ''
+            - GET
+            - POST
             allowedHeaders: '*'
       discovery:
         locator:
@@ -24,8 +25,8 @@ spring:
         uri: lb://CHAT-SERVICE
         predicates:
         - Path=/chat-service/**
-        #filters:
-        #- DedupeResponseHeader=Access-Control-Allow-Origin
+        filters:
+        - DedupeResponseHeader=Access-Control-Allow-Origin
 #management:
 #  endpoints:
 #    web:
