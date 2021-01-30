@@ -1,11 +1,9 @@
 server:
   port: 8008
- 
 eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8001/eureka 
-
 spring:
   application:
     name: ws-gateway
@@ -16,3 +14,8 @@ spring:
         uri: localhost:8007
         predicates:
         - Path=/chat-service/
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*'
