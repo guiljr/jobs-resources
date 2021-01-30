@@ -9,10 +9,10 @@ spring:
     name: ws-gateway
   cloud:
     gateway:
-      globalcors:
-        corsConfigurations:
-          '[/**]':
-            allowedOrigins: "http://localhost:3000/"
+      #globalcors:
+      #  corsConfigurations:
+      #    '[/**]':
+      #      allowedOrigins: "http://localhost:3000/"
       discovery:
         locator:
           enabled: true
