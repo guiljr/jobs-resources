@@ -15,4 +15,4 @@ spring:
         predicates:
         - Path=/chat-service/**
         filters:
-        - RewritePath=/chat-service/(?.*), /${remains}
+        - RewritePath=/chat-service/**, /${remains}
