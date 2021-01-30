@@ -11,7 +11,6 @@ spring:
     gateway:
       routes:
       - id: chat-service
-        uri: lb://CHAT-SERVICE
+        uri: lb://chat-service
         predicates:
-        - Path=/chat/**
-        - Method=GET,POST
+        - Path=/chat-service/**
