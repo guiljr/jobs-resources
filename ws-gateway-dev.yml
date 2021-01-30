@@ -13,6 +13,6 @@ spring:
       - id: chat-service
         uri: lb://chat-service
         predicates:
-        - Path=/chat-service
+        - Path=/chat-service/**
         #filters:
         #- RewritePath=/chat-service/**, /${remains}
