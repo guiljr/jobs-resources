@@ -12,8 +12,7 @@ spring:
       globalcors:
         corsConfigurations:
           '[/**]':
-            allowedOrigins: "*"
-            allowedMethods: "*"
+            allowedOrigins: "http://localhost:3000/"
       discovery:
         locator:
           enabled: true
