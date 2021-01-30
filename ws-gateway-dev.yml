@@ -14,3 +14,5 @@ spring:
         uri: lb://chat-service
         predicates:
         - Path=/chat-service/**
+        filters:
+        - RewritePath=/chat-service/(?.*), /${remains}
