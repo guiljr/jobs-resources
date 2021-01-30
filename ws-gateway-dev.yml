@@ -14,3 +14,4 @@ spring:
         uri: lb://CHAT-SERVICE
         predicates:
         - Path=/chat-service/**
+        - Method=GET,POST
