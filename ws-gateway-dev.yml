@@ -1,0 +1,18 @@
+server:
+  port: 8008
+ 
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8001/eureka 
+
+spring:
+  application:
+    name: ws-gateway
+  cloud:
+    gateway:
+      routes:
+      - id: chat-service
+        uri: lb://CHAT-SERVICE
+        predicates:
+        - Path=/chat-service/**
