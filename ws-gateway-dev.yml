@@ -14,5 +14,5 @@ spring:
       routes:
       - id: chat-service
         uri: localhost:8007
-        #predicates:
-        #- Path=/chat-service/
+        predicates:
+        - Path=/chat-service/
