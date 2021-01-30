@@ -24,8 +24,8 @@ spring:
         uri: lb://CHAT-SERVICE
         predicates:
         - Path=/chat-service/**
-        filters:
-        - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
+        #filters:
+        #- DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
 #management:
 #  endpoints:
 #    web:
