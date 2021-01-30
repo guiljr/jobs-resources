@@ -9,6 +9,9 @@ spring:
     name: ws-gateway
   cloud:
     gateway:
+      discovery:
+        locator:
+          enabled: true
       routes:
       - id: chat-service
         uri: lb://CHAT-SERVICE
@@ -16,3 +19,8 @@ spring:
         - Path=/chat-service/**
         #filters:
         #- RewritePath=/chat-service/**, /${remains}
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*'
