@@ -14,8 +14,3 @@ spring:
         uri: http://localhost:8007
         predicates:
         - Path=/chat-service/
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*'
