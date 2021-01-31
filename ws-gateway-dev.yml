@@ -9,14 +9,14 @@ spring:
     name: ws-gateway
   cloud:
     gateway:
-      globalcors:
-        corsConfigurations:
-          '[/**]':
+      #globalcors:
+        #corsConfigurations:
+          #'[/**]':
             #allowedOrigins: '*'
-            allowedMethods:
-            - GET
-            - POST
-            allowedHeaders: '*'
+            #allowedMethods:
+            #- GET
+            #- POST
+            #allowedHeaders: '*'
       discovery:
         locator:
           enabled: true
@@ -26,8 +26,8 @@ spring:
         predicates:
         - Path=/chat-service/**
         filters:
-        - AddResponseHeader=Access-Control-Allow-Origin, *
-        - DedupeResponseHeader=Access-Control-Allow-Origin
+        #- AddResponseHeader=Access-Control-Allow-Origin, *
+        #- DedupeResponseHeader=Access-Control-Allow-Origin
 #management:
 #  endpoints:
 #    web:
