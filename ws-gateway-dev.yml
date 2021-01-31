@@ -9,7 +9,8 @@ spring:
     name: ws-gateway
   cloud:
     gateway:
-      #globalcors:
+      globalcors:
+        add-to-simple-url-handler-mapping: true
         #corsConfigurations:
           #'[/**]':
             #allowedOrigins: '*'
