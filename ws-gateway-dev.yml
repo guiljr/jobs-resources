@@ -11,11 +11,11 @@ spring:
     name: ws-gateway
   cloud:
     gateway:
-      xForwarded:
-        forAppend: true
-        hostAppend: true
-        portAppend: true
-        prefixAppend: true
+      x-forwarded:
+        for-append: true
+        host-append: true
+        port-append: true
+        prefix-append: true
       #globalcors:
         #add-to-simple-url-handler-mapping: true
         #corsConfigurations:
