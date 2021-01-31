@@ -28,7 +28,8 @@ spring:
         uri: lb://CHAT-SERVICE
         predicates:
         - Path=/chat-service/**
-        #filters:
+        filters:
+        - RemoveResponseHeader= Access-Control-Allow-Origin
         #- AddResponseHeader=Access-Control-Allow-Origin, *
         #- DedupeResponseHeader=Access-Control-Allow-Origin
 #management:
