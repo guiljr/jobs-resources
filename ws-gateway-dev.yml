@@ -31,8 +31,8 @@ spring:
         #filters:
         #- AddResponseHeader=Access-Control-Allow-Origin, *
         #- DedupeResponseHeader=Access-Control-Allow-Origin
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
+#management:
+#  endpoints:
+#    web:
+#      exposure:
+#        include: "*"
