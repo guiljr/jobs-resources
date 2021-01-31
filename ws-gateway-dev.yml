@@ -2,6 +2,8 @@ server:
   port: 8008
 eureka:
   client:
+    registerWithEureka: true
+    fetchRegistry: true
     serviceUrl:
       defaultZone: http://localhost:8001/eureka 
 spring:
@@ -34,4 +36,3 @@ management:
     web:
       exposure:
         include: "*"
-#        include: "*'
