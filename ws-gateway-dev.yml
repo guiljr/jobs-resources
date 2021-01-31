@@ -9,14 +9,14 @@ spring:
     name: ws-gateway
   cloud:
     gateway:
-      #globalcors:
-      #  corsConfigurations:
-      #    '[/**]':
-      #      allowedOrigins: '*'
-      #      allowedMethods:
-      #      - GET
-      #      - POST
-      #      allowedHeaders: '*'
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: '*'
+            allowedMethods:
+            - GET
+            - POST
+            allowedHeaders: '*'
       discovery:
         locator:
           enabled: true
