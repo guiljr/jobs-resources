@@ -1,0 +1,44 @@
+server:
+  port: 8008
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://localhost:8001/eureka 
+spring:
+  application:
+    name: ws-gateway
+  cloud:
+    gateway:
+      x-forwarded:
+        for-append: true
+        host-append: true
+        port-append: true
+        prefix-append: true
+      #globalcors:
+        #add-to-simple-url-handler-mapping: true
+        #corsConfigurations:
+          #'[/**]':
+            #allowedOrigins: '*'
+            #allowedMethods:
+            #- GET
+            #- POST
+            #allowedHeaders: '*'
+      discovery:
+        locator:
+          enabled: true
+      routes:
+      - id: chat-service
+        uri: lb://CHAT-SERVICE
+        predicates:
+        - Path=/chat-service/**
+        filters:
+        - RemoveResponseHeader= Access-Control-Allow-Origin
+        #- AddResponseHeader=Access-Control-Allow-Origin, *
+        #- DedupeResponseHeader=Access-Control-Allow-Origin
+#management:
+#  endpoints:
+#    web:
+#      exposure:
+#        include: "*"
